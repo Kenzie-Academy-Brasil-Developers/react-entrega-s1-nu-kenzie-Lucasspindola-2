@@ -1,0 +1,45 @@
+.containerSummary {
+  display: flex;
+  width: 90%;
+  /* width: 562px; */
+  justify-content: space-between;
+  padding: 25px;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.containerSummary h3 {
+  font-weight: 800;
+}
+
+.btn_summary_todos {
+  cursor: pointer;
+  width: 69px;
+  height: 40px;
+  border: none;
+  color: var(--white-0);
+  border-radius: 8px;
+  background-color: var(--color-primary);
+}
+
+.btn_summary {
+  cursor: pointer;
+  width: 92px;
+  height: 40px;
+  border: none;
+  color: var(--grey-3);
+  border-radius: 8px;
+  background-color: var(--grey-2);
+}
+
+.container_btns {
+  display: flex;
+  gap: 10px;
+}
+@media only screen and (min-width: 600px) {
+  .containerSummary {
+    width: 562px;
+    flex-direction: row;
+    gap: 0;
+  }
+}
