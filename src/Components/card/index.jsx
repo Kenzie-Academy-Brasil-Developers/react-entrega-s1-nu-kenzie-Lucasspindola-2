@@ -1,16 +1,17 @@
 import { BsFillTrashFill } from "react-icons/bs";
 import "./style.css";
 
-const CardList = ({ element }) => {
+const CardList = ({ element, id }) => {
+  const removeItem = () => {};
   return (
-    <div className="card_list_container">
+    <div id={id} className="card_list_container">
       <div className="card_left">
         <h2 className="title_list">{element.description}</h2>
         <span>{element.type}</span>
       </div>
       <div className="card_right">
         <span>R${element.value}.00</span>
-        <button className="btnTrash">
+        <button onClick={() => removeItem()} className="btnTrash">
           <BsFillTrashFill />
         </button>
       </div>

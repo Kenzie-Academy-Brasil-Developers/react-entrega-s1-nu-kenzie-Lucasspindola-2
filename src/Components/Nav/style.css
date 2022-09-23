@@ -23,3 +23,8 @@
   border-radius: 8px;
   background-color: var(--grey-2);
 }
+
+.btn_inicio:hover {
+  background-color: var(--color-primary-2);
+  color: var(--white-0);
+}

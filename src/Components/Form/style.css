@@ -1,5 +1,7 @@
 .form_container {
   width: 100%;
+  max-width: 314px;
+  padding: 5px;
   /* width: 40%; */
   height: 351px;
   /* background-color: aqua; */
@@ -22,16 +24,17 @@
 }
 .container_select {
   display: flex;
-  gap: 50px;
+  gap: 25px;
   justify-content: space-around;
+  max-width: 70%;
 }
 
 .container_input_descriotion_fixed {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   font-size: 12px;
-  width: 100%;
+  width: 70%;
 }
 .container_input_value {
   display: flex;
@@ -56,6 +59,10 @@
   background-color: var(--color-primary);
   color: var(--white-0);
   font-size: 1rem;
+}
+
+.btn_form:hover {
+  background-color: var(--color-primary-2);
 }
 
 @media only screen and (min-width: 600) {
