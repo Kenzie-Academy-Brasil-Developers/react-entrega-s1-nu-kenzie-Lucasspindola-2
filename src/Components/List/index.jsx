@@ -1,7 +1,22 @@
-import CardList from "../card/index";
+import { BsFillTrashFill } from "react-icons/bs";
+// import CardList from "../card/index";
 import "./style.css";
 
-const List = ({ filterTransactions }) => {
+const List = ({
+  filterTransactions,
+  setFilterTransactions,
+  setListTransactions,
+  listTransactions,
+}) => {
+  const removeItem = (indexBtn) => {
+    const filterRemove = listTransactions.filter((item, index) => {
+      return indexBtn !== index;
+    });
+    console.log(filterRemove);
+    setFilterTransactions(filterRemove);
+    setListTransactions(filterRemove);
+  };
+
   return (
     <div>
       <ul className="ul_lists">
@@ -9,13 +24,51 @@ const List = ({ filterTransactions }) => {
           if (element.type === "entrada") {
             return (
               <li className="component_green" key={index}>
-                <CardList element={element} />
+                {/* <CardList element={element} /> */}
+
+                <div className="card_list_container">
+                  <div className="card_left">
+                    <h2 className="title_list">{element.description}</h2>
+                    <span className="type_information">{element.type}</span>
+                  </div>
+                  <div className="card_right">
+                    <span className="value_information">
+                      R${element.value}.00
+                    </span>
+                    <button
+                      onClick={() => removeItem(index)}
+                      className="btnTrash"
+                    >
+                      <BsFillTrashFill />
+                    </button>
+                  </div>
+                </div>
               </li>
             );
           } else {
             return (
               <li className="component_grey" key={index}>
-                <CardList id={index} element={element} />
+                {/* <CardList id={index} element={element} /> */}
+                {/* aqui */}
+                <div className="card_list_container">
+                  <div className="card_left">
+                    <h2 className="title_list">{element.description}</h2>
+                    <span className="type_information">{element.type}</span>
+                  </div>
+                  <div className="card_right">
+                    <span className="value_information">
+                      R${element.value}.00
+                    </span>
+                    <button
+                      onClick={() => removeItem(index)}
+                      className="btnTrash"
+                    >
+                      <BsFillTrashFill />
+                    </button>
+                  </div>
+                </div>
+
+                {/* aqui */}
               </li>
             );
           }
@@ -25,14 +78,3 @@ const List = ({ filterTransactions }) => {
   );
 };
 export default List;
-
-// {element.type === 'entrada' ?
-
-// <li className="component_green" key={index}>
-//   <CardList element={element} />
-// </li>
-// :
-// <li className="component_grey" key={index}>
-//   <CardList element={element} />
-// </li>
-// }

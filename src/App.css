@@ -1,8 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;600&family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
 .AppPage {
   text-align: center;
   width: 100vw;
   height: 100vh;
-  /* background-color:  */
 
   background-color: var(--grey-3);
 }
@@ -16,14 +16,17 @@
   align-items: flex-start;
 }
 .img_page_exemple {
-  height: 50%;
+  /* height: 50%; */
   width: 50%;
-  /* versão desktop n precisa delimitar width: ; */
-  /* background-color: var(--grey-3); */
 }
 .btn_open {
+  font-family: Inter;
+  font-style: medium;
+  font-size: 16px;
+  line-height: 19px;
   cursor: pointer;
   width: 100%;
+  max-width: 241px;
   height: 48px;
   border-radius: 8px;
   padding: 13px 20px;
@@ -32,28 +35,24 @@
   color: rgba(255, 255, 255, 1);
   border: none;
 }
+
 .title_one {
+  font-family: Nunito;
+  font-style: ExtraBold;
   font-size: 38px;
-  font-weight: 800;
   line-height: 48px;
+  font-weight: 800;
   color: rgba(255, 255, 255, 1);
 }
 .title_two {
-  color: rgba(255, 255, 255, 1);
-  font-style: Nunito;
+  font-family: Nunito;
+  font-style: regular;
   font-size: 16px;
   line-height: 26px;
   text-align: left;
+  color: rgba(255, 255, 255, 1);
 }
 
-/* Text Style: Headline
-Font family: Nunito
-Font style: Regular
-Font size: 16px
-Line height: 26px
-Line height: 119%
-Align: Left
-Vertical align: Top */
 .container_title {
   display: flex;
   width: 50%;
@@ -92,11 +91,6 @@ Vertical align: Top */
   flex-direction: column;
 }
 
-/* .App-logo {
-  height: 40vmin;
-  pointer-events: none;
-} */
-
 .container_total_price {
   display: flex;
   flex-direction: column;
@@ -106,6 +100,10 @@ Vertical align: Top */
   max-width: 314px;
   padding: 5px;
   gap: 20px;
+}
+
+.img_no_list {
+  width: 80%;
 }
 
 @media only screen and (min-width: 600px) {
@@ -129,5 +127,9 @@ Vertical align: Top */
     max-width: 314px;
     padding: 5px;
     gap: 20px;
+  }
+
+  .container_content_page {
+    align-items: unset;
   }
 }

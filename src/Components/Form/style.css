@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;600&display=swap");
 .form_container {
   width: 100%;
   max-width: 314px;
@@ -53,18 +54,51 @@
 .btn_form {
   cursor: pointer;
   width: 80%;
+
   height: 48px;
   border-radius: 8px;
   border: none;
   background-color: var(--color-primary);
   color: var(--white-0);
   font-size: 1rem;
+  font-size: 16px;
+  font-family: inter;
+  font-style: medium;
+  line-height: 19px;
 }
 
 .btn_form:hover {
   background-color: var(--color-primary-2);
 }
+.informations_form {
+  font-size: 12px;
+  font-family: inter;
+  font-style: regular;
+  line-height: 22px;
+}
 
+.btn_font {
+  font-size: 16px;
+  font-family: inter;
+  font-style: medium;
+  line-height: 19px;
+}
+.exemple_form {
+  color: #868e96;
+  font-family: inter;
+  font-style: regular;
+  font-size: 12px;
+  line-height: 12px;
+  vertical-align: top;
+}
+
+/* Font family: Inter
+Font style: Regular
+Font size: 12px
+Line height: 20px
+Line height: 138%
+Align: Left
+Vertical align: Top */
 @media only screen and (min-width: 600) {
   .form_container {
     width: 40%;

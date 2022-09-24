@@ -17,9 +17,10 @@
   width: 69px;
   height: 40px;
   border: none;
-  color: var(--white-0);
+  color: var(--grey-3);
   border-radius: 8px;
-  background-color: var(--color-primary);
+  /* background-color: var(--color-primary); */
+  background-color: var(--grey-2);
 }
 
 .btn_summary {
@@ -31,11 +32,33 @@
   border-radius: 8px;
   background-color: var(--grey-2);
 }
-
+.btn_summary:hover {
+  background-color: var(--grey-3);
+  color: #ffffff;
+}
+.btn_summary_todos:hover {
+  background-color: var(--grey-3);
+  color: #ffffff;
+}
 .container_btns {
   display: flex;
   gap: 10px;
 }
+.finances-summary {
+  font-family: Nunito;
+  font-style: Bold;
+  font-size: 16px;
+  line-height: 30px;
+}
+
+.container_btns button {
+  font-family: Nunito;
+  font-style: Semibold;
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: 600;
+}
+
 @media only screen and (min-width: 600px) {
   .containerSummary {
     width: 562px;

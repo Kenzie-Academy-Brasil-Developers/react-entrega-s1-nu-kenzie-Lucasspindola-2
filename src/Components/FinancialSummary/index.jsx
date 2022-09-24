@@ -1,3 +1,4 @@
+// import { useState } from "react";
 import "./style.css";
 
 const FinancialSummary = ({
@@ -16,17 +17,23 @@ const FinancialSummary = ({
     }
   };
 
+  // const [btnClick,setBtnClick] = useState(false);
+
+  // const colorChange=()=>{
+
+  // }
+
   return (
     <div className="containerSummary">
-      <h3>Resumo financeiro</h3>
+      <h3 className="finances-summary">Resumo financeiro</h3>
       <div className="container_btns">
         <button onClick={() => filter("todos")} className="btn_summary_todos">
           Todos
         </button>
-        <button onClick={() => filter("entrada")} className="btn_summary">
+        <button onClick={() => filter("Entrada")} className="btn_summary">
           Entrada
         </button>
-        <button onClick={() => filter("saída")} className="btn_summary">
+        <button onClick={() => filter("Despesa")} className="btn_summary">
           Despesas
         </button>
       </div>

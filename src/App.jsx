@@ -14,8 +14,8 @@ import TotalValue from "./Components/TotalValue/index";
 
 const App = () => {
   const [listTransactions, setListTransactions] = useState([
-    { description: "Salário recebido", type: "entrada", value: 2500 },
-    { description: "Conta de luz", type: "saída", value: -150 },
+    // { description: "Salário recebido", type: "Entrada", value: 2500 },
+    // { description: "Conta de luz", type: "Despesa", value: -150 },
   ]);
 
   const [filterTransactions, setFilterTransactions] =
@@ -68,14 +68,29 @@ const App = () => {
             <TotalValue listTransactions={listTransactions} />
           </div>
 
-          <div>
-            <FinancialSummary
-              listTransactions={listTransactions}
-              filterTransactions={filterTransactions}
-              setFilterTransactions={setFilterTransactions}
-            />
-            <List filterTransactions={filterTransactions} />
-          </div>
+          {listTransactions.length ? (
+            <div className="container_summary_list">
+              <FinancialSummary
+                listTransactions={listTransactions}
+                filterTransactions={filterTransactions}
+                setFilterTransactions={setFilterTransactions}
+              />
+              <List
+                listTransactions={listTransactions}
+                setFilterTransactions={setFilterTransactions}
+                setListTransactions={setListTransactions}
+                filterTransactions={filterTransactions}
+              />
+            </div>
+          ) : (
+            <div className="container_no_list">
+              <img
+                className="img_no_list"
+                src="/Group 271.png"
+                alt="Imagem lista vazia"
+              ></img>
+            </div>
+          )}
         </div>
       </div>
     );
@@ -83,6 +98,3 @@ const App = () => {
 };
 
 export default App;
-
-// totalvalue-reduce,erro
-// List

@@ -18,6 +18,10 @@
   color: var(--color-primary);
   font-weight: 800;
   font-size: 1rem;
+  font-family: Nunito;
+  font-style: Bold;
+  font-size: 16px;
+  line-height: 30px;
 }
 
 .container_totalValue_descriptions {
@@ -25,4 +29,18 @@
   flex-direction: column;
   align-items: flex-start;
   gap: 20px;
+}
+
+.container_totalValue_descriptions span {
+  font-family: Nunito;
+  font-style: Bold;
+  font-size: 12px;
+  line-height: 30px;
+}
+.container_totalValue_descriptions h3 {
+  font-family: Nunito;
+  font-style: Bold;
+  font-size: 16px;
+  line-height: 30px;
+  font-weight: 700;
 }

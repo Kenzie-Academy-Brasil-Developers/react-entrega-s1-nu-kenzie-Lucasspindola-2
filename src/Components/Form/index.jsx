@@ -9,7 +9,7 @@ const Form = ({
 }) => {
   const [newDescription, setNewDescription] = useState("");
   const [newValue, setNewValue] = useState(0);
-  const [selectValue, setSelectValue] = useState("entrada");
+  const [selectValue, setSelectValue] = useState("Entrada");
 
   const newItem = (event) => {
     event.preventDefault();
@@ -25,14 +25,11 @@ const Form = ({
       setNewDescription("");
       setNewValue(0);
     }
-
-    console.log(listTransactions);
-    // limpar inputs e select
   };
   return (
     <form className="form_container" onSubmit={newItem}>
       <div className="container_input_description container_input_descriotion_fixed">
-        <span>Descrição</span>
+        <span className="informations_form">Descrição</span>
         <input
           className="input_card_description"
           placeholder="Digite aqui sua descrição"
@@ -40,10 +37,11 @@ const Form = ({
           value={newDescription}
           onChange={(event) => setNewDescription(event.target.value)}
         />
+        <span className="exemple_form">Ex: Compra de roupas</span>
       </div>
       <div className="container_select">
         <div className="container_input_value">
-          <span>Valor</span>
+          <span className="informations_form">Valor</span>
           <input
             className="inputCard"
             type="number"
@@ -52,15 +50,15 @@ const Form = ({
           />
         </div>
         <div className="container_input_value_type">
-          <span>Tipo de valor</span>
+          <span className="informations_form">Tipo de valor</span>
           <select
             className="selectCard"
             name=""
             id=""
             onChange={(event) => setSelectValue(event.target.value)}
           >
-            <option value="entrada">Entrada</option>
-            <option value="saída">Saída</option>
+            <option value="Entrada">Entrada</option>
+            <option value="Despesa">Despesa</option>
           </select>
         </div>
       </div>
@@ -72,23 +70,3 @@ const Form = ({
 };
 
 export default Form;
-
-// Boa tarde, fiz objeto que quero acrescentar no [] pelo useState. Mas sempre quebra, já peguei os valores.
-// Codigo como esta
-
-// variavel evento do btn
-// const newItem = (event) => {
-//   event.preventDefault();
-
-//   let newObject = {
-//     description: newDescription,
-//     type: selectValue,
-//     value: newValue,
-//   };
-
-//   // setListTransactions(newObject);
-//   console.log(newObject);
-//   // limpar inputs e select
-// };
-
-// Referente entrega NuKenzie
