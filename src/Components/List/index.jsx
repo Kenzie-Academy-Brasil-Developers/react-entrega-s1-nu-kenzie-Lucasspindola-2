@@ -1,5 +1,5 @@
 import { BsFillTrashFill } from "react-icons/bs";
-// import CardList from "../card/index";
+
 import "./style.css";
 
 const List = ({
@@ -21,11 +21,9 @@ const List = ({
     <div>
       <ul className="ul_lists">
         {filterTransactions.map((element, index) => {
-          if (element.type === "entrada") {
+          if (element.type === "Entrada") {
             return (
               <li className="component_green" key={index}>
-                {/* <CardList element={element} /> */}
-
                 <div className="card_list_container">
                   <div className="card_left">
                     <h2 className="title_list">{element.description}</h2>
@@ -48,8 +46,6 @@ const List = ({
           } else {
             return (
               <li className="component_grey" key={index}>
-                {/* <CardList id={index} element={element} /> */}
-                {/* aqui */}
                 <div className="card_list_container">
                   <div className="card_left">
                     <h2 className="title_list">{element.description}</h2>
@@ -67,8 +63,6 @@ const List = ({
                     </button>
                   </div>
                 </div>
-
-                {/* aqui */}
               </li>
             );
           }
