@@ -8,7 +8,15 @@
   justify-content: space-around;
   align-items: center;
 }
+.container_position {
+  display: flex;
 
+  justify-content: space-between;
+  flex-direction: row;
+  width: 100%;
+  margin-left: 10%;
+  margin-right: 10%;
+}
 .container_nav img {
   width: 122.68px;
   height: 19.53px;

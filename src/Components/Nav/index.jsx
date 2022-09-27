@@ -5,10 +5,12 @@ const Nav = ({ setRedirect }) => {
   };
   return (
     <div className="container_nav">
-      <img src="/Nu Kenzie.png" alt="logo" />
-      <button onClick={redirectPage} className="btn_inicio">
-        Inicio
-      </button>
+      <div className="container_position">
+        <img src="/Nu Kenzie.png" alt="logo" />
+        <button onClick={redirectPage} className="btn_inicio">
+          Inicio
+        </button>
+      </div>
     </div>
   );
 };

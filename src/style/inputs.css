@@ -18,6 +18,11 @@
   font-size: 1rem;
   margin-bottom: 4px;
 }
+input::placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 @media only screen and (min-width: 800px) {
   .inputCard {
@@ -38,5 +43,11 @@
     background-color: var(--grey-0);
     margin-top: 5px;
     font-size: 1rem;
+  }
+  input::placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
   }
 }

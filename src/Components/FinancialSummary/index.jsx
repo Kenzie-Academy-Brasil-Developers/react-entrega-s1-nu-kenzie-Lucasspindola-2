@@ -17,12 +17,6 @@ const FinancialSummary = ({
     }
   };
 
-  // const [btnClick,setBtnClick] = useState(false);
-
-  // const colorChange=()=>{
-
-  // }
-
   return (
     <div className="containerSummary">
       <h3 className="finances-summary">Resumo financeiro</h3>

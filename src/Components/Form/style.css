@@ -92,13 +92,6 @@
   vertical-align: top;
 }
 
-/* Font family: Inter
-Font style: Regular
-Font size: 12px
-Line height: 20px
-Line height: 138%
-Align: Left
-Vertical align: Top */
 @media only screen and (min-width: 600) {
   .form_container {
     width: 40%;

@@ -13,15 +13,28 @@ const Form = ({
 
   const newItem = (event) => {
     event.preventDefault();
-    if (!!newValue && !!newDescription) {
+
+    if (!!newValue && !!newDescription && selectValue === "Entrada") {
       let newObject = {
         description: newDescription,
         type: selectValue,
         value: newValue,
       };
 
-      setListTransactions([...listTransactions, newObject]);
-      setFilterTransactions([...filterTransactions, newObject]);
+      setListTransactions([newObject, ...listTransactions]);
+      setFilterTransactions([newObject, ...filterTransactions]);
+      setNewDescription("");
+      setNewValue(0);
+    }
+    if (!!newValue && !!newDescription && selectValue === "Despesa") {
+      let newObject = {
+        description: newDescription,
+        type: selectValue,
+        value: -newValue,
+      };
+
+      setListTransactions([newObject, ...listTransactions]);
+      setFilterTransactions([newObject, ...filterTransactions]);
       setNewDescription("");
       setNewValue(0);
     }
